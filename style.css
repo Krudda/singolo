@@ -1,0 +1,24 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+.wrap {
+        margin: 0 auto;
+        width: 1020px;
+}
+header {
+        display: flex;
+        background-color: #2d303a;
+}
+.logo {
+        text-align: center;
+        width: 50%;
+        color: white;
+}
+.redStar {
+        color: #f06c64;
+}
+.menu {
+        color: white;
+
+}
