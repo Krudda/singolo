@@ -25,7 +25,8 @@
         display: flex;
         justify-content: space-between;
         margin-left: 40px;
-        margin-right: 34px;
+        margin-right: 33px;
+        padding: 30px 0 30px;
         width: 100%;
 }
 
@@ -35,17 +36,18 @@
 
 .header {
         display: flex;
-        height: 90px;
+        /* height: 90px; */
         background-color: #2d303a;
         border-bottom: 5px #323746 solid;
 }
-.logo {
+.logo, .logo h1 {
         display: flex;
-        height: 90px;
+        /* height: 90px; */
         align-items: center;
         color: white;
-       font-family: LatoBold;
-       font-size: 25px;
+        font-family: LatoBold;
+        font-size: 25px;
+        font-weight: 400;
 }
 .logo a,  .logo a:visited {
         text-decoration: none;
@@ -55,6 +57,7 @@
         color: #f06c64;
 }
 .navbar {
+        padding-top: 4px;
         width: 384px;
         height: 100%;
         display: flex;
@@ -62,7 +65,7 @@
         /* align-items: stretch; */
 }
 .navbar ul {
-        padding-top: 4px;
+        /* padding-top: 4px; */
         /* margin-right: 5%; */
         display: flex;
         width: 100%;
@@ -75,7 +78,7 @@
 }
 .navbar ul li a, .navbar ul li a:visited {
         display: flex;
-        height: 90px;
+        height: 100%;
         /* line-height: 90px; */
         /* text-align: center; */
         align-items: center;
@@ -86,7 +89,7 @@
 }
 .li_dot{
         display: flex;
-        height: 90px;
+        height: 100%;
         align-items: center;
         color: #494e62;
 }
@@ -195,11 +198,15 @@
         height: 100px;
         width: 300px;
         margin-right: 20px;
+        overflow: hidden;
 }
 .img {
         margin-right: 21px;
         /* width: 32px;
         height: 32px; */
+}
+.desc {
+        -webkit-column-width: 150px;
 }
 .desc-last h3{
         padding-left: 2px;
