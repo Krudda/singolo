@@ -227,24 +227,37 @@
 }
 .portfolio-nav {
         display: flex;
-        margin-top: 16px;
-        padding-bottom: 10px;
+        /* justify-content: space-between; */
+        margin-top: 15px;
+        padding-bottom: 9px;
+        /* width: 287px; */
 }
 .btn-portfolio {
-        padding: 0 6px 0 6px;
-        height: 21px;
+        /* width: 100%; */
+        /* padding: 0 5.5px 0 6.5px; */
         margin-right: 10px;
         font-family: Lato, Arial, Helvetica, sans-serif;
         font-size: 12px;
+        line-height: 20px;
         color: #767e9e;
         background-color: transparent;
         border: 1px solid #767e9e;
-        border-radius: 4px;
+        border-radius: 5px;
         outline: none;
+}
+.six-pad {
+        padding: 0 6px 0 7px;
+}
+.five-pad {
+        padding: 0 5px 0 6px;
 }
 .btn-portfolio:hover, .btn-portfolio:active {
         color: white;
         border: 1px solid white;
+}
+.portfolio-images {
+        max-height: 615px;
+        overflow: hidden;
 }
 .four-column {
         display: flex;
@@ -282,32 +295,56 @@
         line-height: 30px;
         font-size: 18px;
         text-align: justify;
-        letter-spacing: 0.01rem;
+        /* letter-spacing: 0.01rem; */
 }
 .employee-card {
         margin-right: 20px;
+}
+.employee-photo {
+        height: 300px;
+}
+.design-error {
+        margin-left: -1px;
+        margin-right: 1px;
 }
 .employee-card .last{
         margin-right: 0;
 }
 .employee-desc {
-        margin-top: 16px;
+        margin-top: 18px;
 }
-.employee-desc h3 {
+.employee-name {
+        width: 300px;
         margin-top: -4px;
+        white-space: nowrap;
+        overflow: hidden;
         font-family: Lato-Black;
         font-size: 18px;
         letter-spacing: -0.01em;
 }
 .employee-desc >p{
-        margin-top: 8px;
+        margin-top: 9px;
+        padding-bottom: 10px;
         line-height: 21px;
         font-size: 12px;
-        font-family: Lato-light, Arial, Helvetica, sans-serif;
+        font-family: Lato, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        text-align: justify;
+        /* word-spacing: -0.049em; */
+}
+.minimized-spacing {
+        word-spacing: -0.03rem;
+        /* letter-spacing: 0.009rem; */
 }
 .employee-social {
-        margin-top: 24px;
+        display: flex;
+        margin-top: 14px;
+        padding-left: 1px;
 }
 .employee-social a {
-        margin-right: 4px;
+        display: block;
+        justify-content: flex-start;
+        height: 100%;
+        /* width: 100%; */
+        margin-right: 8px;
 }
