@@ -459,7 +459,7 @@ input::placeholder, textarea::placeholder {
 }
 .contacts a:visited,  .contacts a:visited {
         text-decoration: none;
-        color: white;
+        color: #f0d8d9;
 }
 
 .contacts img {
