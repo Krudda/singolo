@@ -453,6 +453,15 @@ input::placeholder, textarea::placeholder {
         margin-top: 1px;
         margin-right: 1px;
 }
+.contacts a,  .contacts a {
+        text-decoration: none;
+        color: #f0d8d9;
+}
+.contacts a:visited,  .contacts a:visited {
+        text-decoration: none;
+        color: white;
+}
+
 .contacts img {
         margin-right: 10px;
 }
