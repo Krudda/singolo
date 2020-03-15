@@ -16,17 +16,17 @@
                                                <h1> <span>SINGOLO</span><span class="redStar">*</span></h1>
                                         </a>
                                 </div>
-                                <div class="navbar">
+                                <div class="navbar" id = "navbar">
                                         <ul>
-                                                <li><a href="#">HOME</a></li>
+                                                <li><a  class = "active" href="#">HOME</a></li>
                                                 <li class = "li_dot">·</li>
-                                                <li><a href="#">SERVICES</a></li>
+                                                <li><a href="#services">SERVICES</a></li>
                                                 <li class = "li_dot">·</li>
-                                                <li><a href="#">PORTFOLIO</a></li>
+                                                <li><a href="#portfolio">PORTFOLIO</a></li>
                                                 <li class = "li_dot">·</li>
-                                                <li><a href="#">ABOUT</a></li>
+                                                <li><a href="#about">ABOUT</a></li>
                                                 <li class = "li_dot">·</li>
-                                                <li><a href="#">CONTACT</a></li>
+                                                <li><a href="#contact">CONTACT</a></li>
                                         </ul>
                                 </div>
                         </div>
@@ -34,20 +34,27 @@
 
                 <main>
                         <section class="slider">
-                                <div class="vertical-phone">
-                                        <img src="./assets/img/iPhone Vertical.png" alt="Первый слайд">
+                                <div class="slideItem sliderOne">
+                                        <div id = "black-screen-vertical" class="hidden"></div>
+                                        <div id = "black-screen-horizontal" class="hidden"></div>
+                                        <div class="vertical-phone">
+                                                <img id = "vertical-phone" src="./assets/img/iPhone Vertical.png" alt="vertical-phone">
+                                        </div>
+                                        <div class="horizontal-phone">
+                                                <img id = "horizontal-phone" src="./assets/img/iPhone Horizontal.png" alt="horizontal-phone">
+                                        </div>
                                 </div>
-                                <div class="horizontal-phone">
-                                        <img src="./assets/img/iPhone Horizontal.png" alt="Второй слайд">
+                                <div class="slideItem sliderTwo">
+                                        <div class="second-slide">
+                                                <img src="./assets/img/Slider2.png" alt="vertical-phone">
+                                        </div>
                                 </div>
-                                <button class="prev">
-                                        <img src="./assets/img/left-arrow.png" alt="left-arrow">
-                                </button>
-                                <button class="next">
-                                        <img src="./assets/img/right-arrow.png" alt="left-arrow">
-                                </button>
+
+                                <button class="prev" onclick="minusSlide()"></button>
+                                <button class="next" onclick="plusSlide()"></button>
+
                         </section>
-                        <section class="services">
+                        <section class="services" id = "services">
                                 <div class="services-desc">
                                         <h2>Our Services</h2>
                                         <p>
@@ -138,7 +145,7 @@
         </div>
         <div class="wrap">       
                 <main>
-                        <section class="portfolio">
+                        <section class="portfolio" id = "portfolio">
                                 <div class="portfolio-wrap">
                                         <h2>Portfolio</h2>
                                         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -196,7 +203,7 @@
                                         
                                 </div>
                         </section>
-                        <section class="about">
+                        <section class="about"  id = "about">
                                 <div class="about-wrap">
                                         <h2>About Us</h2>
                                         <p class = "about-desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -269,9 +276,9 @@
                                 </div>
                         </section>
                 </main>
-        </div>
+        </div iv>
         <div class="wrap">
-                <section class = quote>
+                <section class = "quote" id = "contact">
                         <div class="quote-wrap">
                                 <h2>Get a Quote</h2>
                                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -280,13 +287,23 @@
                                 </p>
                                 <div class="feedback">
                                         <div class="feedback-form">
-                                                <form action="#">
+                                                <form action="#" id = "feedback">
                                                         <input type="text" name="name" id = "name" placeholder="Name (Required)" required>
                                                         <input type="email" name="email" id = "email" placeholder="Email (Required)" required>
-                                                        <input type="text" name="subject"id = "subject" placeholder="Subject">
-                                                        <textarea rows="9" cols = "10" placeholder="Describe your project in detail..."></textarea>
-                                                        <button class = "form-button" type="submit" name="submit">Send</button>
+                                                        <input type="text" name="subject" id = "subject" placeholder="Subject">
+                                                        <textarea rows="9"  id = "describe" cols = "10" placeholder="Describe your project in detail..."></textarea>
+                                                        <button class = "form-button" id="submit" type="submit" name="submit">Send</button>
                                                 </form>
+                                        </div>
+                                        <div id="modal" class = "hidden">
+                                                <div id = "message" class="hidden">
+                                                        <h3 class = "massage-header">The letter was sent </h3>
+                                                        <div class="message-text-place">
+                                                                <p class = "message-text"><span id = "theme"></span></p>
+                                                                <p class = "message-text"><span id = "description"></span></p>
+                                                        </div>
+                                                        <button class = "message-button" id = "close-btn">OK</button>
+                                                </div>
                                         </div>
                                         <div class="feedback-contact">
                                                 <h3>Contact Information</h3>
@@ -302,8 +319,6 @@
                                                 </div>
                                         </div>
                                 </div>
-                                
-                                
                         </div>
                 </section>
                 <footer class = "footer">
@@ -323,5 +338,6 @@
 
                 </footer>
         </div>
+        <script src="./script.js"></script>
 </body>
 </html>
