@@ -94,10 +94,7 @@ a.active  {
         cursor: default;
         pointer-events: none;
 }
-/* li:not(.active):hover {
-        cursor: pointer;
 
-} */
 /* ===================================== slider ============================== */
 .slider {
         position: relative;
@@ -343,33 +340,44 @@ to {
         border-radius: 5px;
         outline: none;
 }
+.btn-portfolio.active {
+        color: white;
+        border: 1px solid white;
+}
+
 .six-pad {
         padding: 0 6px 0 7px;
 }
 .five-pad {
         padding: 0 5px 0 6px;
 }
-.btn-portfolio:hover, .btn-portfolio:active {
+.btn-portfolio:hover {
         color: white;
         border: 1px solid white;
 }
 .portfolio-images {
-        max-height: 615px;
+        max-height: 616px;
         overflow: hidden;
+        margin: 0px -5px;
 }
 .four-column {
         display: flex;
         margin-top: 10px;
         padding-bottom: 10px;
-
+        padding-left: 5px;
 }
 .portfolio-image {
         width: 220px;
         height: 187px;
         margin-right: 20px;
 }
-
-
+.portfolio-image-img {
+        cursor: pointer;
+}
+.portfolio-image-img.selected {
+        box-sizing: border-box; 
+        box-shadow: 0 0 0 5px #F06C64;
+}
 
 /* ====================================== about ================================= */
 .about {
@@ -447,7 +455,7 @@ to {
         margin-right: 8px;
 }
 
-/* ================ Get a quote ================== */
+/* ==================================== Get a quote =========================== */
 
 .quote {        
         height: 649px;

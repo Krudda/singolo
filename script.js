@@ -1,4 +1,5 @@
 const NAVBAR = document.getElementById('navbar');
+// console.log(NAVBAR);
 
 NAVBAR.addEventListener('click', (event) => {
         NAVBAR.querySelectorAll('a').forEach(el => el.classList.remove('active'));
@@ -19,7 +20,7 @@ for (let anchor of anchors) {
         })
 }
 
-// ======== modal ==========
+// =================================== modal ============================
 
 const BUTTON = document.getElementById('submit');
 const CLOSE_BUTTON = document.getElementById('close-btn');
@@ -139,3 +140,22 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "inline-flex";
 }
+// ======================== active images ======================
+
+const IMAGES = document.getElementById('portfolio-images');
+// console.log(IMAGES);
+
+IMAGES.addEventListener('click', (event) => {
+        let selectedImage = event.target;
+        IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+        selectedImage.classList.add('selected');
+});
+
+
+const TABBAR = document.getElementById('portfolio-nav');
+console.log(TABBAR);
+
+TABBAR.addEventListener('click', (event) => {
+        TABBAR.querySelectorAll('button').forEach(el => el.classList.remove('active'));
+        event.target.classList.add('active');
+});
