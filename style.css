@@ -235,7 +235,7 @@ to {
         opacity: 0.4;
 }
 
-/* ================ Servicer Section =============== */
+/* =================================== Servicer Section =============================== */
 .services {
         height: 495px;
         background-color: #f2f2f2;
@@ -246,7 +246,7 @@ to {
         padding: 59px 40px 0 41px;
 }
 .services-desc > p {
-        margin-top: 18px;
+        margin-top: 17px;
         padding-bottom: 26px;
         font-family: Lato-Light, Arial, Helvetica, sans-serif;
         line-height: 30px;
@@ -371,7 +371,7 @@ to {
 
 
 
-/* ================ about ================== */
+/* ====================================== about ================================= */
 .about {
         height: 728px;
         background-color: #f2f2f2;
@@ -387,7 +387,7 @@ to {
         font-family: Lato-Black, Arial, Helvetica, sans-serif;
 }
 .about-desc {
-        margin-top: 18px;
+        margin-top: 19px;
         padding-bottom: 23px;
         font-family: Lato-Light, Arial, Helvetica, sans-serif;
         line-height: 30px;
@@ -421,7 +421,7 @@ to {
         letter-spacing: -0.01em;
 }
 .employee-desc >p{
-        margin-top: 9px;
+        margin-top: 11px;
         padding-bottom: 10px;
         line-height: 21px;
         font-size: 12px;
@@ -485,7 +485,7 @@ to {
 }
 .feedback-form input,  .feedback-form textarea {
         width: 604px;
-        padding: 11px 0 12px 15px;
+        padding: 12px 0 12px 15px;
         /* padding: 0 0 0 15px; */
         margin-bottom: 16px;
         background-color: #d6564f;
@@ -593,7 +593,7 @@ input::placeholder, textarea::placeholder {
 .copyright {
         font-family: Lato, Arial, Helvetica, sans-serif;
         font-size: 12px;
-        padding: 30px 0 31px 2px;
+        padding: 31px 0 32px 2px;
         letter-spacing: -0.01em;
 }
 .footer-social {
@@ -607,7 +607,7 @@ input::placeholder, textarea::placeholder {
         margin-top: 1px;
         margin-left: 8px;
 }
-/* ============ modal ============== */
+/* =================================== modal =============================== */
 #modal {
         position: fixed;
         width: 100vw;
