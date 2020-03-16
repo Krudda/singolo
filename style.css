@@ -31,6 +31,11 @@
 }
 
 .header {
+        /* position: fixed;
+        width: 100%;
+        top: 0px;
+        width: 1020px;
+        z-index: 1000; */
         display: flex;
         background-color: #2d303a;
         border-bottom: 6px #323746 solid;
@@ -39,7 +44,7 @@
         display: flex;
         align-items: center;
         color: white;
-        font-family: Lato-Bold;
+        font-family: Lato-Bold, Arial, Helvetica, sans-serif;
         font-size: 25px;
         font-weight: 400;
         letter-spacing: -0.02em;
@@ -62,7 +67,7 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
-        font-family: Lato-Bold;
+        font-family: Lato-Bold, Arial, Helvetica, sans-serif;
         font-size: 12px;
 }
 .navbar ul li {
@@ -132,7 +137,7 @@ to {
         height: 595px;
         width: 100%;
         background-color: #648BF0;
-        border-bottom: 5px solid #435b97;
+        border-bottom: 5px solid rgb(90, 128, 224);
         /* opacity: 0; */
 }
 .second-slide {
@@ -292,7 +297,7 @@ to {
 
 .desc h3 {
         margin-top: -4px;
-        font-family: Lato-Black;
+        font-family: Lato-Black, Arial, Helvetica, sans-serif;
         font-size: 18px;
         letter-spacing: -0.01em;
 }
@@ -322,14 +327,10 @@ to {
 }
 .portfolio-nav {
         display: flex;
-        /* justify-content: space-between; */
         margin-top: 15px;
         padding-bottom: 9px;
-        /* width: 287px; */
 }
 .btn-portfolio {
-        /* width: 100%; */
-        /* padding: 0 5.5px 0 6.5px; */
         margin-right: 10px;
         font-family: Lato, Arial, Helvetica, sans-serif;
         font-size: 12px;
@@ -339,10 +340,12 @@ to {
         border: 1px solid #767e9e;
         border-radius: 5px;
         outline: none;
+        cursor: pointer;
 }
 .btn-portfolio.active {
         color: white;
         border: 1px solid white;
+        cursor: default;
 }
 
 .six-pad {

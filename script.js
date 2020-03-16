@@ -153,9 +153,70 @@ IMAGES.addEventListener('click', (event) => {
 
 
 const TABBAR = document.getElementById('portfolio-nav');
-console.log(TABBAR);
+// console.log(TABBAR);
 
 TABBAR.addEventListener('click', (event) => {
         TABBAR.querySelectorAll('button').forEach(el => el.classList.remove('active'));
         event.target.classList.add('active');
 });
+
+// ============================= move portfolio images =======================
+
+const W_DESIGN_TAB = document.getElementById('w-design');
+const G_DESIGN_TAB = document.getElementById('g-design');
+const ARTWORK_TAB = document.getElementById('artwork');
+const ALL_TAB = document.getElementById('all');
+
+const W_DESIGN_IMGS = document.getElementsByClassName('w-design-img');
+const G_DESIGN_IMGS = document.getElementsByClassName('g-design-img');
+const ARTWORK_IMGS = document.getElementsByClassName('artwork-img');
+const ALL_IMGS = document.getElementsByClassName('portfolio-image-img');
+
+
+W_DESIGN_TAB.addEventListener('click', (event) => {
+        IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+        for (i = 0; i <= 3; i++) {
+                W_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+1}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                G_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+5}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                ARTWORK_IMGS[i].src = `./assets/img/Pic-${i+9}.png`;
+        }
+});
+
+G_DESIGN_TAB.addEventListener('click', (event) => {
+        IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+        for (i = 0; i <= 3; i++) {
+                G_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+1}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                ARTWORK_IMGS[i].src = `./assets/img/Pic-${i+5}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                W_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+9}.png`;
+        }
+});
+
+ARTWORK_TAB.addEventListener('click', (event) => {
+        IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+        for (i = 0; i <= 3; i++) {
+                ARTWORK_IMGS[i].src = `./assets/img/Pic-${i+1}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                W_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+5}.png`;
+        }
+        for (i = 0; i <= 3; i++) {
+                G_DESIGN_IMGS[i].src = `./assets/img/Pic-${i+9}.png`;
+        }
+});
+
+ALL_TAB.addEventListener('click', (event) => {
+        IMAGES.querySelectorAll('img').forEach(el => el.classList.remove('selected'));
+        for (i = 0; i <= 11; i++) {
+                ALL_IMGS[i].src = `./assets/img/Pic-${i+1}.png`;
+        }
+});
+
+

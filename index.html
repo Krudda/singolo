@@ -150,52 +150,52 @@
                                         <h2>Portfolio</h2>
                                         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                                         <div id="portfolio-nav" class="portfolio-nav">
-                                                <button class = "btn-portfolio six-pad active">All</button>
-                                                <button class = "btn-portfolio six-pad">Web Design</button>
-                                                <button class = "btn-portfolio five-pad">Graphic Design</button>
-                                                <button class = "btn-portfolio five-pad">Artwork</button>
+                                                <button id = "all" class = "btn-portfolio six-pad active">All</button>
+                                                <button id = "w-design" class = "btn-portfolio six-pad">Web Design</button>
+                                                <button id = "g-design"class = "btn-portfolio five-pad">Graphic Design</button>
+                                                <button id = "artwork" class = "btn-portfolio five-pad">Artwork</button>
                                         </div>
                                         <div id = "portfolio-images" class="portfolio-images">
-                                                <div class="four-column">
+                                                <div id = "w-design-line" class="four-column">
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-1.png" alt="Pic-1">
+                                                                <img id = "Pic-1" class="portfolio-image-img w-design-img" src="./assets/img/Pic-1.png" alt="Pic-1">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-2.png" alt="Pic-2">
+                                                                <img id = "Pic-2" class="portfolio-image-img g-design-img" src="./assets/img/Pic-2.png" alt="Pic-2">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-3.png" alt="Pic-3">
+                                                                <img id = "Pic-3" class="portfolio-image-img w-design-img" src="./assets/img/Pic-3.png" alt="Pic-3">
                                                         </div>
                                                         <div class="portfolio-image last">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-4.png" alt="Pic-4">
+                                                                <img id = "Pic-4" class="portfolio-image-img artwork-img" src="./assets/img/Pic-4.png" alt="Pic-4">
                                                         </div>
                                                 </div>
-                                                <div class="four-column">
+                                                <div id = "g-design-line" class="four-column">
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-5.png" alt="Pic-5">
+                                                                <img id = "Pic-5" class="portfolio-image-img g-design-img" src="./assets/img/Pic-5.png" alt="Pic-5">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-6.png" alt="Pic-6">
+                                                                <img id = "Pic-6" class="portfolio-image-img w-design-img" src="./assets/img/Pic-6.png" alt="Pic-6">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-7.png" alt="Pic-7">
+                                                                <img id = "Pic-7" class="portfolio-image-img artwork-img" src="./assets/img/Pic-7.png" alt="Pic-7">
                                                         </div>
                                                         <div class="portfolio-image last">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-8.png" alt="Pic-8">
+                                                                <img id = "Pic-8" class="portfolio-image-img artwork-img" src="./assets/img/Pic-8.png" alt="Pic-8">
                                                         </div>
                                                 </div>
-                                                <div class="four-column">
+                                                <div id = "artwork-line" class="four-column">
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-9.png" alt="Pic-9">
+                                                                <img id = "Pic-9" class="portfolio-image-img g-design-img" src="./assets/img/Pic-9.png" alt="Pic-9">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-10.png" alt="Pic-10">
+                                                                <img id = "Pic-10" class="portfolio-image-img w-design-img" src="./assets/img/Pic-10.png" alt="Pic-10">
                                                         </div>
                                                         <div class="portfolio-image">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-11.png" alt="Pic-11">
+                                                                <img id = "Pic-11" class="portfolio-image-img artwork-img" src="./assets/img/Pic-11.png" alt="Pic-11">
                                                         </div>
                                                         <div class="portfolio-image last">
-                                                                <img class="portfolio-image-img" src="./assets/img/Pic-12.png" alt="Pic-12">
+                                                                <img id = "Pic-12" class="portfolio-image-img g-design-img" src="./assets/img/Pic-12.png" alt="Pic-12">
                                                         </div>
                                                 </div>
                                                 
@@ -291,7 +291,7 @@
                                                         <input type="text" name="name" id = "name" placeholder="Name (Required)" required>
                                                         <input type="email" name="email" id = "email" placeholder="Email (Required)" required>
                                                         <input type="text" name="subject" id = "subject" placeholder="Subject">
-                                                        <textarea rows="9"  id = "describe" cols = "10" placeholder="Describe your project in detail..."></textarea>
+                                                        <textarea rows="9"  id = "describe" cols = "10" maxlength = "770" placeholder="Describe your project in detail..."></textarea>
                                                         <button class = "form-button" id="submit" type="submit" name="submit">Send</button>
                                                 </form>
                                         </div>
