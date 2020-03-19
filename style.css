@@ -1,3 +1,7 @@
+html {
+        scroll-behavior: smooth;
+        --scroll-behavior: smooth;
+}
 * {
         margin: 0;
         padding: 0;
@@ -31,11 +35,11 @@
 }
 
 .header {
-        /* position: fixed;
+        position: fixed;
         width: 100%;
         top: 0px;
         width: 1020px;
-        z-index: 1000; */
+        z-index: 1000;
         display: flex;
         background-color: #2d303a;
         border-bottom: 6px #323746 solid;
@@ -102,24 +106,44 @@ a.active  {
 
 /* ===================================== slider ============================== */
 .slider {
+        padding-top: 94px;
+	/* margin-top: -95px; */
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
+        /* border-top: 95px solid transparent;
+        margin-top: -95px;
+        background-clip: padding-box; */
+        /* margin-top: 95px; */
         position: relative;
         height: 600px;
         width: 100%;
         /* display: flex; */
-        /* overflow: hidden; */
+        overflow: hidden;
+}
 
-}
 .slideItem {
-        animation-name: fade;
+        animation-name: slidein, fade;
         animation-duration: 0.8s;
-    }
+        /* animation-direction: alternate; */
+}
+@keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 100%; 
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+}
 @keyframes fade {
-from {
-        opacity: 0.5
-}
-to {
-        opacity: 1
-}
+        from {
+                opacity: 0.5
+        }
+        to {
+                opacity: 1
+        }
 }
 .sliderOne {
         position: absolute;
@@ -158,7 +182,7 @@ to {
 }  
 #black-screen-vertical {
         position: absolute;
-        z-index: 1000;
+        z-index: 100;
         top: 117px;
         left: 125px;
         width: 190px;
@@ -170,12 +194,12 @@ to {
         background-repeat: no-repeat;
         background-position: 50% 50%;
         transition: 0.8s ease;
-        cursor: pointer;
+        /* cursor: pointer; */
 }
 
 #black-screen-horizontal {
         position: absolute;
-        z-index: 1000;
+        z-index: 100;
         top: 115px;
         left: 557px;
         transform: rotate(90deg);
@@ -188,6 +212,28 @@ to {
         background-repeat: no-repeat;
         background-position: 50% 50%;
         transition: 0.8s ease;
+        /* cursor: pointer; */
+}
+#phone-button-vertical {
+        position: absolute;
+        z-index: 1000;
+        top: 460px;
+        left: 200px;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+}
+#phone-button-horizontal {
+        position: absolute;
+        z-index: 1000;
+        top: 260px;
+        left: 435px;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 50%;
         cursor: pointer;
 }
 
@@ -200,7 +246,7 @@ to {
 .prev {
         display: block;
         height: 30px;
-        width: 16px;
+        width: 17px;
         background-image: url('./assets/img/left-arrow-black.png');
         opacity: 0.1;
         background-repeat: no-repeat;
@@ -218,7 +264,7 @@ to {
 .slider .prev, .slider .next {
         cursor: pointer;
         position: absolute;
-        top: 271px;
+        top: 365px;
         margin: 10px 15px 10px 42px;
         /* transition: 0.2s ease; */
         /* border-radius: 0 30px 30px 0; */
@@ -237,18 +283,33 @@ to {
         opacity: 0.4;
 }
 
-/* =================================== Servicer Section =============================== */
+/* =================================== Services Section =============================== */
 .services {
+        position: relative; 
+        border-top: 94px solid transparent;
+        margin-top: -94px;
+        background-clip: padding-box;
+        /* left: 0px;
+        top: -95px; */
         height: 495px;
         background-color: #f2f2f2;
         border-bottom: 5px solid #ffffff;
         color: #666d89;
 }
+#services:before {
+	content: "";
+	position: absolute;
+	top: -2px; 
+	left: 0;
+	right: 0;
+	border-top: 2px solid transparent; 
+}
+
 .services-desc {
         padding: 59px 40px 0 41px;
 }
 .services-desc > p {
-        margin-top: 17px;
+        margin-top: 19px;
         padding-bottom: 26px;
         font-family: Lato-Light, Arial, Helvetica, sans-serif;
         line-height: 30px;
@@ -304,9 +365,21 @@ to {
 
 /* =============================== portfolio =============================== */
 .portfolio {
+        position: relative; 
+        border-top: 94px solid transparent;
+        margin-top: -94px;
+        background-clip: padding-box;
         height: 864px;
         background-color: #2d303a;
         border-bottom: 5px solid #323746;
+}
+#portfolio:before {
+	content: "";
+	position: absolute;
+	top: -2px; 
+	left: 0;
+	right: 0;
+	border-top: 2px solid transparent; 
 }
 .portfolio-wrap {
         padding: 60px 40px 0 40px;
@@ -384,12 +457,24 @@ to {
 
 /* ====================================== about ================================= */
 .about {
+        position: relative; 
+        border-top: 94px solid transparent;
+        margin-top: -94px;
+        background-clip: padding-box;
         height: 728px;
         background-color: #f2f2f2;
         border-bottom: 5px solid #ffffff;
 }
+#about:before {
+	content: "";
+	position: absolute;
+	top: -2px; 
+	left: 0;
+	right: 0;
+	border-top: 2px solid transparent; 
+}
 .about-wrap {
-        padding: 58px 40px 0 40px;
+        padding: 59px 40px 0 40px;
         color: #666d89;
         /* justify-content: space-around; */
 }

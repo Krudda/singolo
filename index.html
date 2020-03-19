@@ -8,8 +8,8 @@
         <link rel="shortcut icon" href="./assets/img/favicon.ico.png" type="image/x-icon">
 </head>
 <body>
-        <div class="wrap">       
-                <header class = "header">
+        <div class="wrap">      
+                <header id = "header" class = "header">
                         <div class="content-wrapper">
                                 <div class="logo">
                                         <a href="#">
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="navbar" id = "navbar">
                                         <ul>
-                                                <li><a  class = "active" href="#">HOME</a></li>
+                                                <li><a  class = "active" href="#slider">HOME</a></li>
                                                 <li class = "li_dot">·</li>
                                                 <li><a href="#services">SERVICES</a></li>
                                                 <li class = "li_dot">·</li>
@@ -33,10 +33,12 @@
                 </header>
 
                 <main>
-                        <section class="slider">
+                        <section id = "slider" class="slider">
                                 <div class="slideItem sliderOne">
                                         <div id = "black-screen-vertical" class="hidden"></div>
+                                        <div id = "phone-button-vertical"></div>
                                         <div id = "black-screen-horizontal" class="hidden"></div>
+                                        <div id = "phone-button-horizontal"></div>
                                         <div class="vertical-phone">
                                                 <img id = "vertical-phone" src="./assets/img/iPhone Vertical.png" alt="vertical-phone">
                                         </div>
@@ -339,5 +341,7 @@
                 </footer>
         </div>
         <script src="./script.js"></script>
+        <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+        <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
 </body>
 </html>

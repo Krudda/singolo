@@ -6,19 +6,89 @@ NAVBAR.addEventListener('click', (event) => {
         event.target.classList.add('active');
 });
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+// let hasSmoothScroll = 'scrollBehavior' in document.documentElement.style;
 
-for (let anchor of anchors) {
-        anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const blockID = anchor.getAttribute('href').substr(1);
+// if ( !hasSmoothScroll ) {
+//         const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
+//         animationTime = 400,
+//         framesCount = 20;
+
+//         anchors.forEach(function(item) {
+//                 item.addEventListener('click', function(e) {
+//                         e.preventDefault();
+//                         let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+//                         let scroller = setInterval(function() {
+//                                 let scrollBy = coordY / framesCount;
+//                                 if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+//                                         window.scrollBy(0, scrollBy);
+//                                 } else {
+//                                         window.scrollTo(0, coordY);
+//                                         clearInterval(scroller);
+//                                 }
+//                         }, animationTime / framesCount);
+//                 });
+//         });
+// }
+
+
+// const anchors = document.querySelectorAll('a[href*="#"]')
+
+// for (let anchor of anchors) {
+//         anchor.addEventListener('click', function (e) {
+//                 e.preventDefault();
+//                 const blockID = anchor.getAttribute('href').substr(1);
         
-                document.getElementById(blockID).scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+//                 document.getElementById(blockID).scrollIntoView({
+//                         behavior: 'smooth',
+//                         block: 'start'
+//                 })
+//         })
+// }
+
+// === scroll =====
+const TOP = {
+        HEADER: document.getElementById('header'),
+        SLIDER: document.getElementById('slider'),
+        SERVICES: document.getElementById('services'),
+        PORTFOLIO: document.getElementById('portfolio'),
+        ABOUT: document.getElementById('about')
+};
+
+// console.log(TOP.ABOUT.offsetTop);
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+        const currentPosition = window.scrollY;
+        // console.log(currentPosition);
+        // console.log(document.documentElement.clientHeight);
+        // console.log(document.documentElement.scrollHeight);
+
+        for (el in TOP) {
+                if ((TOP[el].offsetTop) <= currentPosition && (TOP[el].offsetTop + TOP[el].offsetHeight) > currentPosition ) {
+                        NAVBAR.querySelectorAll('a').forEach(a => {
+                                a.classList.remove('active');
+                                if ( TOP[el].getAttribute('id') ===  a.getAttribute('href').substring(1)) {
+                                        a.classList.add('active');
+                                }
+                        })
+                }
+        }
+
+        let clientHeight = document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight;
+        let documentHeight = document.documentElement.scrollHeight ? document.documentElement.scrollHeight : document.body.scrollHeight;
+        let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+
+        if((documentHeight - clientHeight) <= scrollTop){
+                NAVBAR.querySelectorAll('a').forEach(a => {
+                        a.classList.remove('active');
+                        if (a.getAttribute('href').substring(1) === 'contact') {
+                                a.classList.add('active');
+                        }
                 })
-        })
+        }
 }
+
 
 // =================================== modal ============================
 
@@ -83,12 +153,23 @@ CLOSE_BUTTON.addEventListener('click', (event) => {
         document.getElementById('feedback').reset();
 });
 
-// =========== on/off phone button ==============
+// ====================================== on/off phone button ===============================
 
 const VERTICAL_PHONE = document.getElementById('black-screen-vertical');
 const HORIZONTAL_PHONE = document.getElementById('black-screen-horizontal');
+const VERTICAL_PHONE_BUTTON = document.getElementById('phone-button-vertical');
+const HORIZONTAL_PHONE_BUTTON = document.getElementById('phone-button-horizontal');
 
-VERTICAL_PHONE.addEventListener('click', (event) => {
+// VERTICAL_PHONE.addEventListener('click', (event) => {
+//         let blackScreenVertical = document.getElementById('black-screen-vertical');
+//         if (blackScreenVertical.classList == 'hidden') {
+//                 blackScreenVertical.classList.remove('hidden');
+//         }
+//         else  if (blackScreenVertical.classList !== 'hidden') {
+//                 blackScreenVertical.classList.add('hidden');
+//         }
+// });
+VERTICAL_PHONE_BUTTON.addEventListener('click', (event) => {
         let blackScreenVertical = document.getElementById('black-screen-vertical');
         if (blackScreenVertical.classList == 'hidden') {
                 blackScreenVertical.classList.remove('hidden');
@@ -97,7 +178,16 @@ VERTICAL_PHONE.addEventListener('click', (event) => {
                 blackScreenVertical.classList.add('hidden');
         }
 });
-HORIZONTAL_PHONE.addEventListener('click', (event) => {
+// HORIZONTAL_PHONE.addEventListener('click', (event) => {
+//         let blackScreenHorizontal = document.getElementById('black-screen-horizontal');
+//         if (blackScreenHorizontal.classList == 'hidden') {
+//                 blackScreenHorizontal.classList.remove('hidden');
+//         }
+//         else  if (blackScreenHorizontal.classList !== 'hidden') {
+//                 blackScreenHorizontal.classList.add('hidden');
+//         }
+// });
+HORIZONTAL_PHONE_BUTTON.addEventListener('click', (event) => {
         let blackScreenHorizontal = document.getElementById('black-screen-horizontal');
         if (blackScreenHorizontal.classList == 'hidden') {
                 blackScreenHorizontal.classList.remove('hidden');
@@ -107,7 +197,7 @@ HORIZONTAL_PHONE.addEventListener('click', (event) => {
         }
 });
 
-// ================= slider =============
+// ==================================== slider ==============================
 
 let slideIndex = 1;
 showSlides(slideIndex);
